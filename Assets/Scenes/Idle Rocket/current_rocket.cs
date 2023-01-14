@@ -12,7 +12,7 @@ public class current_rocket : MonoBehaviour
     void Awake()
     {
         maxfuel=rocket_sobj.Fuel;
-        maxheat=rocket_sobj.heat;
+      
         this.GetComponent<SpriteRenderer>().sprite=rocket_sobj.rocket_sprite;
     }
 
