@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 78064535}
   - component: {fileID: 78064534}
   - component: {fileID: 78064533}
+  - component: {fileID: 78064536}
   m_Layer: 5
   m_Name: Button_rocket_1
   m_TagString: Untagged
@@ -206,7 +207,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 78064534}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 78064536}
+        m_TargetAssemblyTypeName: Rocket_choser, Assembly-CSharp
+        m_MethodName: clicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &78064534
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -245,6 +258,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 78064531}
   m_CullTransparentMesh: 1
+--- !u!114 &78064536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 78064531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56a1ec7bd34eee44c9427cfb708d682e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rocket_Scriptable: {fileID: 11400000, guid: 3386efd5465a8af41a5033eb7c262f2b, type: 2}
 --- !u!1 &79019277
 GameObject:
   m_ObjectHideFlags: 0
@@ -913,10 +939,10 @@ RectTransform:
   m_Father: {fileID: 1168960302}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 205, y: -825}
+  m_SizeDelta: {x: 300, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &270726703
 MonoBehaviour:
@@ -1326,6 +1352,7 @@ GameObject:
   - component: {fileID: 349590364}
   - component: {fileID: 349590363}
   - component: {fileID: 349590362}
+  - component: {fileID: 349590365}
   m_Layer: 5
   m_Name: Button_rocket_4
   m_TagString: Untagged
@@ -1397,7 +1424,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 349590363}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 349590365}
+        m_TargetAssemblyTypeName: Rocket_choser, Assembly-CSharp
+        m_MethodName: clicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &349590363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1436,6 +1475,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 349590360}
   m_CullTransparentMesh: 1
+--- !u!114 &349590365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 349590360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56a1ec7bd34eee44c9427cfb708d682e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rocket_Scriptable: {fileID: 11400000, guid: d99b4c99f677ba54c9cb0a477632e9d1, type: 2}
 --- !u!1 &357759895
 GameObject:
   m_ObjectHideFlags: 0
@@ -1448,6 +1500,7 @@ GameObject:
   - component: {fileID: 357759899}
   - component: {fileID: 357759898}
   - component: {fileID: 357759897}
+  - component: {fileID: 357759900}
   m_Layer: 5
   m_Name: Button_rocket_9
   m_TagString: Untagged
@@ -1519,7 +1572,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 357759898}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 357759900}
+        m_TargetAssemblyTypeName: Rocket_choser, Assembly-CSharp
+        m_MethodName: clicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &357759898
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1558,6 +1623,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 357759895}
   m_CullTransparentMesh: 1
+--- !u!114 &357759900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 357759895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56a1ec7bd34eee44c9427cfb708d682e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rocket_Scriptable: {fileID: 11400000, guid: 0cc7431cc9a646b49b045ce63a3fb3c3, type: 2}
 --- !u!1 &386581089
 GameObject:
   m_ObjectHideFlags: 0
@@ -1575,7 +1653,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &386581090
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2031,6 +2109,7 @@ GameObject:
   - component: {fileID: 495472591}
   - component: {fileID: 495472590}
   - component: {fileID: 495472589}
+  - component: {fileID: 495472592}
   m_Layer: 5
   m_Name: Button_rocket_5
   m_TagString: Untagged
@@ -2102,7 +2181,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 495472590}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 495472592}
+        m_TargetAssemblyTypeName: Rocket_choser, Assembly-CSharp
+        m_MethodName: clicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &495472590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2141,6 +2232,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 495472587}
   m_CullTransparentMesh: 1
+--- !u!114 &495472592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 495472587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56a1ec7bd34eee44c9427cfb708d682e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rocket_Scriptable: {fileID: 11400000, guid: 9cc855c26be51c241972ed0461ef63e8, type: 2}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -2469,6 +2573,7 @@ GameObject:
   - component: {fileID: 583474327}
   - component: {fileID: 583474326}
   - component: {fileID: 583474325}
+  - component: {fileID: 583474328}
   m_Layer: 5
   m_Name: Button_rocket_10
   m_TagString: Untagged
@@ -2540,7 +2645,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 583474326}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 583474328}
+        m_TargetAssemblyTypeName: Rocket_choser, Assembly-CSharp
+        m_MethodName: clicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &583474326
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2579,6 +2696,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 583474323}
   m_CullTransparentMesh: 1
+--- !u!114 &583474328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 583474323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56a1ec7bd34eee44c9427cfb708d682e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rocket_Scriptable: {fileID: 11400000, guid: 0f6df21d33b533a428e7999e5707f461, type: 2}
 --- !u!1 &609714772
 GameObject:
   m_ObjectHideFlags: 0
@@ -2804,10 +2934,10 @@ RectTransform:
   m_Father: {fileID: 1168960302}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 205, y: -375}
+  m_SizeDelta: {x: 300, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &643276456
 MonoBehaviour:
@@ -3314,6 +3444,7 @@ GameObject:
   - component: {fileID: 777664609}
   - component: {fileID: 777664608}
   - component: {fileID: 777664607}
+  - component: {fileID: 777664610}
   m_Layer: 5
   m_Name: Button_rocket_7
   m_TagString: Untagged
@@ -3385,7 +3516,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 777664608}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 777664610}
+        m_TargetAssemblyTypeName: Rocket_choser, Assembly-CSharp
+        m_MethodName: clicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &777664608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3424,6 +3567,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 777664605}
   m_CullTransparentMesh: 1
+--- !u!114 &777664610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 777664605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56a1ec7bd34eee44c9427cfb708d682e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rocket_Scriptable: {fileID: 11400000, guid: 8961de5a623ae974ab99d334a1cb2f51, type: 2}
 --- !u!1 &783426341
 GameObject:
   m_ObjectHideFlags: 0
@@ -3802,6 +3958,7 @@ GameObject:
   - component: {fileID: 881557992}
   - component: {fileID: 881557991}
   - component: {fileID: 881557990}
+  - component: {fileID: 881557993}
   m_Layer: 5
   m_Name: Button_rocket_8
   m_TagString: Untagged
@@ -3873,7 +4030,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 881557991}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 881557993}
+        m_TargetAssemblyTypeName: Rocket_choser, Assembly-CSharp
+        m_MethodName: clicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &881557991
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3912,6 +4081,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 881557988}
   m_CullTransparentMesh: 1
+--- !u!114 &881557993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 881557988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56a1ec7bd34eee44c9427cfb708d682e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rocket_Scriptable: {fileID: 11400000, guid: a0dc6b87d24ed6740a1bbefce5df4abd, type: 2}
 --- !u!1 &957216140
 GameObject:
   m_ObjectHideFlags: 0
@@ -4084,6 +4266,7 @@ GameObject:
   - component: {fileID: 1009571709}
   - component: {fileID: 1009571708}
   - component: {fileID: 1009571707}
+  - component: {fileID: 1009571710}
   m_Layer: 5
   m_Name: Button_rocket_3
   m_TagString: Untagged
@@ -4155,7 +4338,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1009571708}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1009571710}
+        m_TargetAssemblyTypeName: Rocket_choser, Assembly-CSharp
+        m_MethodName: clicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1009571708
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4194,6 +4389,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1009571705}
   m_CullTransparentMesh: 1
+--- !u!114 &1009571710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1009571705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56a1ec7bd34eee44c9427cfb708d682e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rocket_Scriptable: {fileID: 11400000, guid: d059648e5f7513c4dacab39c309d489c, type: 2}
 --- !u!1 &1033824170
 GameObject:
   m_ObjectHideFlags: 0
@@ -5701,7 +5909,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.0006866455, y: 0.000061035156}
+  m_AnchoredPosition: {x: 0.0006713867, y: 0.000061035156}
   m_SizeDelta: {x: -0.14001465, y: 0.58999634}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1540885130
@@ -6505,10 +6713,10 @@ RectTransform:
   m_Father: {fileID: 1168960302}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 205, y: -600}
+  m_SizeDelta: {x: 300, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1754115470
 MonoBehaviour:
@@ -6672,6 +6880,7 @@ GameObject:
   - component: {fileID: 1789479940}
   - component: {fileID: 1789479939}
   - component: {fileID: 1789479938}
+  - component: {fileID: 1789479941}
   m_Layer: 5
   m_Name: Game_start
   m_TagString: Untagged
@@ -6697,8 +6906,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000024796, y: -788.32}
-  m_SizeDelta: {x: 503.8613, y: 384.5897}
+  m_AnchoredPosition: {x: 15, y: -800.8}
+  m_SizeDelta: {x: 606.798, y: 409.544}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1789479938
 MonoBehaviour:
@@ -6794,6 +7003,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1789479936}
   m_CullTransparentMesh: 1
+--- !u!114 &1789479941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1789479936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 945d2af3022a34b46aa9714d424fa023, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  start_Text: {fileID: 1540885130}
 --- !u!1 &1874882321
 GameObject:
   m_ObjectHideFlags: 0
@@ -7346,10 +7568,10 @@ RectTransform:
   m_Father: {fileID: 1168960302}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 205, y: -150}
+  m_SizeDelta: {x: 300, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2028696036
 MonoBehaviour:
@@ -7445,6 +7667,7 @@ GameObject:
   - component: {fileID: 2028837746}
   - component: {fileID: 2028837745}
   - component: {fileID: 2028837744}
+  - component: {fileID: 2028837747}
   m_Layer: 5
   m_Name: Button_rocket_2
   m_TagString: Untagged
@@ -7516,7 +7739,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2028837745}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2028837747}
+        m_TargetAssemblyTypeName: Rocket_choser, Assembly-CSharp
+        m_MethodName: clicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2028837745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7555,6 +7790,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2028837742}
   m_CullTransparentMesh: 1
+--- !u!114 &2028837747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2028837742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56a1ec7bd34eee44c9427cfb708d682e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rocket_Scriptable: {fileID: 11400000, guid: e945598a94755444e85d06f458703066, type: 2}
 --- !u!1 &2032497142
 GameObject:
   m_ObjectHideFlags: 0
@@ -7688,6 +7936,7 @@ GameObject:
   - component: {fileID: 2040703704}
   - component: {fileID: 2040703703}
   - component: {fileID: 2040703702}
+  - component: {fileID: 2040703705}
   m_Layer: 5
   m_Name: Button_rocket_6
   m_TagString: Untagged
@@ -7759,7 +8008,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2040703703}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2040703705}
+        m_TargetAssemblyTypeName: Rocket_choser, Assembly-CSharp
+        m_MethodName: clicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2040703703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7798,6 +8059,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2040703700}
   m_CullTransparentMesh: 1
+--- !u!114 &2040703705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2040703700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56a1ec7bd34eee44c9427cfb708d682e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rocket_Scriptable: {fileID: 11400000, guid: f141c55906eddb34cbf6fe7edeeb6cb9, type: 2}
 --- !u!1 &2055327709
 GameObject:
   m_ObjectHideFlags: 0
@@ -7865,7 +8139,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2068522785
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7961,10 +8235,10 @@ RectTransform:
   m_Father: {fileID: 1168960302}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 205, y: -1050}
+  m_SizeDelta: {x: 300, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2090015752
 MonoBehaviour:

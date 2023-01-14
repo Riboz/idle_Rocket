@@ -20,8 +20,9 @@ public class current_rocket : MonoBehaviour
     public int offline_money_earing_constant;
     public float maxfuel;
     public float maxheat;
-    public void chosed()
+    public void chosed(Rocket_Scriptable_object rocky)
     {
+     rocket_sobj=rocky;
      
       Money_earing_constant=rocket_sobj.Money_earing_constant;
 
@@ -44,13 +45,13 @@ public class current_rocket : MonoBehaviour
          
          for(int a=0;a<=Leftbutton.Length-1;a++)
          {
-            Leftbutton[a].transform.DOLocalMoveX(-700,0.5f);
+            Leftbutton[a].transform.DOMoveX(-300,0.5f);
          }
           for(int a=0;a<=the_chosers.Length-1;a++)
          {
         the_chosers[a].transform.DOMoveX(-300,0.5f);
          }
-         Rightpanel.transform.DOLocalMoveX(750,0.5f);
+         Rightpanel.transform.DOMoveX(1300,0.5f);
          yield break;
     }
     // Update is called once per frame

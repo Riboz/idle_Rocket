@@ -6,16 +6,15 @@ public class Rocket_choser : MonoBehaviour
 {
     // Start is called before the first frame update
     current_rocket Current_rocket;
+    public Rocket_Scriptable_object rocket_Scriptable;
     void Awake()
     {
        Current_rocket=GameObject.FindGameObjectWithTag("Rocket").GetComponent<current_rocket>();
-       
-
     }
-
-    // Update is called once per frame
-    void Update()
+    
+    public void clicked()
     {
-        
+        Current_rocket.chosed(rocket_Scriptable);
     }
+    
 }
