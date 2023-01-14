@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 [CreateAssetMenu(fileName ="new assets",menuName ="rocket")]
-public class Rocket : ScriptableObject
+public class Rocket_Scriptable_object : ScriptableObject
 {
    
    public float Fuel;

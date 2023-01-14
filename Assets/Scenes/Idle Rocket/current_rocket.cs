@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class current_rocket : MonoBehaviour
 {
     // Start is called before the first frame update
-    public Rocket rocket_sobj; 
+    public Rocket_Scriptable_object rocket_sobj; 
     public float maxfuel;
     public float maxheat;
     void Awake()
