@@ -7,8 +7,10 @@ using DG.Tweening;
 public class current_rocket : MonoBehaviour
 {
     // Start is called before the first frame update
-    public Camera camera_;
+
     public int score,money;
+    
+
     public Rocket_Scriptable_object rocket_sobj; 
     [SerializeField] bool Game_start=false;
     [Header("Soldaki buttonlar")]
@@ -27,6 +29,8 @@ public class current_rocket : MonoBehaviour
     public GameObject Fire;
     [SerializeField]private GameObject[]Fire_rocket_now;
     [SerializeField]public Button start_button;
+    [Header("Background")]
+     public GameObject[]back;
     public void chosed(Rocket_Scriptable_object rocky)
     {
      rocket_sobj=rocky;
@@ -62,6 +66,9 @@ public class current_rocket : MonoBehaviour
          Rightpanel.transform.DOMoveX(1300,0.5f);
 
          this.transform.DOLocalMoveY(-1.5f,1);
+
+         back[0].transform.DOLocalMoveY(-10,1); 
+          back[1].transform.DOLocalMoveY(-22,4); 
      
          Fire_rocket_now=new GameObject[rocket_sobj.fire_positions.Length];
 
