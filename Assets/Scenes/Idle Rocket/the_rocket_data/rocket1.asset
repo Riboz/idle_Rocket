@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Fuel: 12
   speed: 15
-  heat: 3
   rocket_sprite: {fileID: 21300000, guid: b9e6773c8c801d840aab13a97acefb12, type: 3}
   Money_earing_constant: 12
   offline_money_earing_constant: 12
+  fire_positions:
+  - {x: 0.6, y: -10.5, z: 0}
+  - {x: -0.6, y: -10.5, z: 0}
