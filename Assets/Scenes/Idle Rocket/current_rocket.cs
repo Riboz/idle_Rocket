@@ -9,7 +9,7 @@ public class current_rocket : MonoBehaviour
     // Start is called before the first frame update
 
 
-    public Text Reward_money_text,score_text,collect_Score_text,money_Text;
+    public Text Reward_money_text,score_text,cscore_text,collect_Score_text,money_Text;
 
     public int score,score_Current,money,current_money;
     public Rocket_Scriptable_object rocket_sobj; 
@@ -74,7 +74,8 @@ public class current_rocket : MonoBehaviour
   if(canplay)
         {
     Game_start=true;
-
+    cscore_text.gameObject.SetActive(true); 
+     score_text.gameObject.SetActive(false);  
     start_button.gameObject.SetActive(false);
    
     StartCoroutine(the_Button_transform());
@@ -157,10 +158,11 @@ public class current_rocket : MonoBehaviour
           
 
           timer_money+=Time.deltaTime;
-
+          cscore_text.text=""+score_Current;
           if(timer_money>0.15f)
           {
             score_Current+=(int)speed;
+            
         current_money+=(int)speed*rocket_sobj.Money_earing_constant/20;
         timer_money=0;
           }
@@ -204,7 +206,8 @@ else
     }
     public void Collect()
     {
-
+      
+    score_text.gameObject.SetActive(true); 
        if(score_Current>=score)
        {
         score=score_Current;
@@ -240,7 +243,7 @@ else
     public void Restart()
     {
      collect_Score_text.text="Score="+score_Current;
-
+     cscore_text.gameObject.SetActive(false); 
      money_takes.SetActive(true);
      StartCoroutine(the_restart_scaler());
 
