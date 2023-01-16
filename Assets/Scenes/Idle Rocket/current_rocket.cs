@@ -45,7 +45,7 @@ public class current_rocket : MonoBehaviour
     { 
         the_choser_activation=false;
         canplay=true;
-        StopCoroutine(the_restart_scaler());
+      
         Heatsli.maxValue=100;
 
       rocket_sobj=rocky;
@@ -61,7 +61,7 @@ public class current_rocket : MonoBehaviour
 
       Current_fuel=maxfuel;
 
-      Current_heat=70;
+      Current_heat=50;
 
       this.GetComponent<SpriteRenderer>().sprite=rocket_sobj.rocket_sprite;
 
