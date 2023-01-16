@@ -45,7 +45,7 @@ public class current_rocket : MonoBehaviour
     { 
         the_choser_activation=false;
         canplay=true;
-
+        StopCoroutine(the_restart_scaler());
         Heatsli.maxValue=100;
 
       rocket_sobj=rocky;
@@ -242,6 +242,7 @@ else
      collect_Score_text.text="Score="+score_Current;
 
      money_takes.SetActive(true);
+     StartCoroutine(the_restart_scaler());
 
      Reward_money_text.text=current_money+"$";
     
@@ -252,7 +253,16 @@ else
          }
      
     }
-   
+   public IEnumerator the_restart_scaler()
+   {
+    for(int i=0;i<=5;i--)
+    {
+      money_takes.transform.DOScale(1.1f,0.5f);
+      yield return new WaitForSeconds(0.5f);
+        money_takes.transform.DOScale(1f,0.5f);
+        yield return new WaitForSeconds(0.5f);
+    }
+   }
    
    
    
