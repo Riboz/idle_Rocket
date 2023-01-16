@@ -30,9 +30,7 @@ public class BackgroundScroller : MonoBehaviour
         if(current_rocket.Game_start)
         {
             mainScrollSpeed=5;
-         
-      
-        
+    
         if (nextScrollingPlane)
         {
             Debug.Log("yani noluyo simdi aminakoyim?");
@@ -49,6 +47,7 @@ public class BackgroundScroller : MonoBehaviour
         else scrollSpeed = mainScrollSpeed;
         
         offset += (Time.deltaTime * scrollSpeed) / 10;
+
         mat.SetTextureOffset("_MainTex", new Vector2(0, offset));
       }
       else
@@ -67,7 +66,6 @@ if(current_rocket.Game_start)
      
         isHeldDown = true;
         
-        
         }
     }
     
@@ -76,8 +74,8 @@ if(current_rocket.Game_start)
     { 
 if(current_rocket.Game_start)
         {
+
         isHeldDown = false;
-      
        
         }
     }

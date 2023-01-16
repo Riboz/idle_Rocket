@@ -9,9 +9,9 @@ public class current_rocket : MonoBehaviour
     // Start is called before the first frame update
 
 
-    public Text Reward_money_text;
+    public Text Reward_money_text,score_text,collect_Score_text;
 
-    public int score,money,current_money;
+    public int score,score_Current,money,current_money;
     public Rocket_Scriptable_object rocket_sobj; 
      public static bool Game_start=false,the_choser_activation;
     [SerializeField] bool tiklaniyor,canplay=false,restart_bool;
@@ -149,18 +149,29 @@ public class current_rocket : MonoBehaviour
     
     
     
-    
+    float timer_money;
     void FixedUpdate()
     {
         if(Game_start)
         {
           
-                
+
+          timer_money+=Time.deltaTime;
+
+          if(timer_money>0.15f)
+          {
+            score_Current+=(int)speed;
+        current_money+=(int)speed*rocket_sobj.Money_earing_constant/20;
+        timer_money=0;
+          }
+            
+      
 if(tiklaniyor)
 {timex+=Time.deltaTime;  
    if(timex>0.1f)
    {
-    if(speed<=rocket_sobj.speed){speed+=3f;}
+    
+    if(speed<=rocket_sobj.speed*2){speed+=3f;}
      timex=0;
     }  
         Current_fuel-=10*Time.deltaTime;
@@ -197,7 +208,13 @@ else
     }
     public void Collect()
     {
-       
+       if(score_Current>=score)
+       {
+        score=score_Current;
+        score_text.text=score+"";
+
+       }
+       score_Current=0;
 
         the_choser_activation=true;
         
@@ -216,7 +233,7 @@ else
             Leftbutton[a].transform.DOMoveX(75,0.5f);
          }
          
-         Rightpanel.transform.DOMoveX(1000,0.5f);
+         Rightpanel.transform.DOMoveX(900,0.5f);
 
             money_takes.SetActive(false);
              Fuelsli.value=Fuelsli.maxValue;
@@ -225,8 +242,10 @@ else
     }
     public void Restart()
     {
-     
+     collect_Score_text.text="Score="+score_Current;
+
      money_takes.SetActive(true);
+
      Reward_money_text.text=current_money+"$";
     
      this.GetComponent<SpriteRenderer>().sprite=null;
