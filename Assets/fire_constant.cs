@@ -20,7 +20,11 @@ public class fire_constant : MonoBehaviour
         {
              this.transform.DOScaleY(fire_constant_value,0.5f);
             yield return new WaitForSeconds(0.5f);
-            this.transform.DOScaleY(1,0.5f);
+          if(fire_constant_value>1.5f)
+          {
+             this.transform.DOScaleY(1.6f,0.5f);
+          }
+           else this.transform.DOScaleY(1,0.5f);
             yield return new WaitForSeconds(0.5f);
         }
         

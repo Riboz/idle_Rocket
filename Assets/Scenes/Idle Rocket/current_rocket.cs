@@ -9,10 +9,9 @@ public class current_rocket : MonoBehaviour
     // Start is called before the first frame update
 
     public int score,money;
-    
-
     public Rocket_Scriptable_object rocket_sobj; 
-    [SerializeField] bool Game_start=false;
+     public static bool Game_start=false;
+    [SerializeField] bool tiklaniyor,canplay=false;
     [Header("Soldaki buttonlar")]
     [SerializeField] Button[] Leftbutton;
     public Image[] the_chosers;
@@ -23,38 +22,58 @@ public class current_rocket : MonoBehaviour
 
     public int Money_earing_constant;
    
-    public float maxfuel;
-    public float maxheat;
+    public float maxfuel,Current_fuel;
+    public float maxheat,Current_heat;
     [Header("Ateş")]
     public GameObject Fire;
-    [SerializeField]private GameObject[]Fire_rocket_now;
-    [SerializeField]public Button start_button;
+    [SerializeField]public GameObject[]Fire_rocket_now;
+    [SerializeField]public Button start_button,Gas_button;
     [Header("Background")]
      public GameObject[]back;
+     [Header("THE_fUEL_HEAT")]
+     public Slider Fuelsli,Heatsli;
+
+
+
+
+
+
     public void chosed(Rocket_Scriptable_object rocky)
     {
-     rocket_sobj=rocky;
+        canplay=true;
+        Heatsli.maxValue=100;
+
+      rocket_sobj=rocky;
      
       Money_earing_constant=rocket_sobj.Money_earing_constant;
 
-
       maxfuel=rocket_sobj.Fuel;
+
+      Fuelsli.maxValue=maxfuel;
+      Fuelsli.value=maxfuel;
+
+      Current_fuel=maxfuel;
+
+      Current_heat=0;
 
       this.GetComponent<SpriteRenderer>().sprite=rocket_sobj.rocket_sprite;
     }
     public void Game_Start_Button()
     {
-
+  if(canplay)
+        {
     Game_start=true;
+
     start_button.gameObject.SetActive(false);
+   
     StartCoroutine(the_Button_transform());
      
-
+        }
     }
     IEnumerator the_Button_transform()
     {
-        
-         
+      
+
          for(int a=0;a<=Leftbutton.Length-1;a++)
          {
             Leftbutton[a].transform.DOMoveX(-300,0.5f);
@@ -83,39 +102,62 @@ public class current_rocket : MonoBehaviour
          
          Fire_rocket_now[i].transform.parent = this.transform;
 
-         Fire_rocket_now[i].GetComponent<fire_constant>().change_constant(1.4f);
+        
 
-         StartCoroutine(Fire_rocket_now[i].GetComponent<fire_constant>().fire());
+         
 
          }
          yield return new WaitForSeconds(0.5f);
-        StartCoroutine(rocketsize());
         
+          Gas_button.gameObject.SetActive(true);
          yield break;
+        
     }
-    IEnumerator rocketsize()
-    {
-         this.transform.DOScale(new Vector3(1.05f,1.05f,0),0.75f);
-
-         yield return new WaitForSeconds(1f);
-         
-         this.transform.DOScale(new Vector3(1f,1f,0),0.75f);
-         
-         yield return new WaitForSeconds(1f);
-         
-         yield return StartCoroutine(rocketsize());
-    }
+    
     //butona tıklandığında go to -1.5f
 
     // tıklanmadığında go to -2 again
 
     // Update is called once per frame
+    public void fuelharca()
+    {
+      tiklaniyor=true;
+    }
+    public void fuelharcama()
+    {
+       tiklaniyor=false;
+    }
+    
+    
+    
+    
     void FixedUpdate()
     {
         if(Game_start)
         {
             
-
+if(tiklaniyor)
+{
+    
+        Current_fuel-=2*Time.deltaTime;
+       Fuelsli.value=Current_fuel;
+        Current_heat+=30*Time.deltaTime;
+      Heatsli.value=Current_heat;
+}
+else
+{
+      if(Current_heat>=0){Current_heat-=30*Time.deltaTime;}
+         Heatsli.value=Current_heat;
+}
+       
+     
+      if(Heatsli.value>=90||Current_fuel<=0)
+      {
+        Game_start=false;
+        // seçim ekranı yine gelsin falan filan fistan
+        // tıklama butonu kayıp olsun diğerleri geri gelsin
+        // en son ki rekoru alsın 
+      }
         }
     }
     // constantları değiştiren fonksiyonlar burada
