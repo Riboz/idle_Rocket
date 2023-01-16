@@ -257,7 +257,7 @@ else
    {
     for(int i=0;i<=5;i--)
     {
-      money_takes.transform.DOScale(1.1f,0.5f);
+      money_takes.transform.DOScale(1.05f,0.5f);
       yield return new WaitForSeconds(0.5f);
         money_takes.transform.DOScale(1f,0.5f);
         yield return new WaitForSeconds(0.5f);
