@@ -8,6 +8,16 @@ public class the_Button_interaction : MonoBehaviour
     // Start is called before the first frame update
     public Image rocket_scroll,planet_scroll,option_scroll;
     public Button rocketb,planetb,optionb;
+    public void FixedUpdate()
+    {
+      if(current_rocket.the_choser_activation)
+      {
+        rocketb.enabled=true;
+        optionb.enabled=true;
+        planetb.enabled=true;
+      }
+      
+    }
     public void rocket_panel()
     {
         StartCoroutine(rocket_button());
