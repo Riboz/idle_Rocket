@@ -18,7 +18,7 @@ public class BackgroundScroller : MonoBehaviour
 
     private float offset;
     private Material mat;   
-    bool  rocky=true;
+  
     
     void Start()
     {
@@ -29,7 +29,7 @@ public class BackgroundScroller : MonoBehaviour
     {
         if(current_rocket.Game_start)
         {
-            mainScrollSpeed=5;
+            mainScrollSpeed=20;
     
         if (nextScrollingPlane)
         {

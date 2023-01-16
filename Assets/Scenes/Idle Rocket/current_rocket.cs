@@ -61,7 +61,7 @@ public class current_rocket : MonoBehaviour
 
       Current_fuel=maxfuel;
 
-      Current_heat=0;
+      Current_heat=70;
 
       this.GetComponent<SpriteRenderer>().sprite=rocket_sobj.rocket_sprite;
 
@@ -167,13 +167,9 @@ public class current_rocket : MonoBehaviour
             
       
 if(tiklaniyor)
-{timex+=Time.deltaTime;  
-   if(timex>0.1f)
-   {
+{  
+   
     
-    if(speed<=rocket_sobj.speed*2){speed+=3f;}
-     timex=0;
-    }  
         Current_fuel-=10*Time.deltaTime;
        Fuelsli.value=Current_fuel;
         Current_heat+=50*Time.deltaTime;
@@ -181,14 +177,14 @@ if(tiklaniyor)
 }
 else
 {
-     timey+=Time.deltaTime;  
-   if(timey>0.1f){speed-=1f; timey=0;}
-      if(Current_heat>=0){Current_heat-=55*Time.deltaTime;}
+     
+   
+      if(Current_heat>=0){Current_heat-=50*Time.deltaTime;}
          Heatsli.value=Current_heat;
 }
        
      
-      if(Heatsli.value>=90||Current_fuel<=-3||speed<0)
+      if(Heatsli.value>=90||Current_fuel<=-3||Heatsli.value<=0 ||speed<0)
       {
         
         // seçim ekranı yine gelsin falan filan fistan
@@ -208,7 +204,7 @@ else
     }
     public void Collect()
     {
-      
+
        if(score_Current>=score)
        {
         score=score_Current;
