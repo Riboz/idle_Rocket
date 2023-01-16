@@ -12,11 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5a7ed4f8d8a1c443972900f76e57f11, type: 3}
   m_Name: rocket2
   m_EditorClassIdentifier: 
-  Fuel: 0
-  speed: 0
+  Fuel: 60
+  speed: 20
   rocket_sprite: {fileID: 21300000, guid: c36882a291356314abd478d3122bf21b, type: 3}
-  Money_earing_constant: 0
-  offline_money_earing_constant: 0
+  Money_earing_constant: 13
   fire_positions:
   - {x: 0.6, y: -10.5, z: 0}
   - {x: -0.6, y: -10.5, z: 0}
