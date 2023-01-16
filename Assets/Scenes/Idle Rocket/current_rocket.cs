@@ -9,7 +9,7 @@ public class current_rocket : MonoBehaviour
     // Start is called before the first frame update
 
 
-    public Text Reward_money_text,score_text,collect_Score_text;
+    public Text Reward_money_text,score_text,collect_Score_text,money_Text;
 
     public int score,score_Current,money,current_money;
     public Rocket_Scriptable_object rocket_sobj; 
@@ -176,14 +176,14 @@ if(tiklaniyor)
     }  
         Current_fuel-=10*Time.deltaTime;
        Fuelsli.value=Current_fuel;
-        Current_heat+=30*Time.deltaTime;
+        Current_heat+=50*Time.deltaTime;
       Heatsli.value=Current_heat;
 }
 else
 {
      timey+=Time.deltaTime;  
    if(timey>0.1f){speed-=1f; timey=0;}
-      if(Current_heat>=0){Current_heat-=40*Time.deltaTime;}
+      if(Current_heat>=0){Current_heat-=55*Time.deltaTime;}
          Heatsli.value=Current_heat;
 }
        
@@ -208,6 +208,7 @@ else
     }
     public void Collect()
     {
+      
        if(score_Current>=score)
        {
         score=score_Current;
@@ -226,7 +227,7 @@ else
         
         money+=current_money;
         current_money=0;
-        
+        money_Text.text=money+"";
      
          for(int a=0;a<=Leftbutton.Length-1;a++)
          {
@@ -255,5 +256,11 @@ else
          }
      
     }
+   
+   
+   
+   
     // constantları değiştiren fonksiyonlar burada
+
+
 }
