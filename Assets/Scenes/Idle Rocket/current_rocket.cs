@@ -36,6 +36,8 @@ public class current_rocket : MonoBehaviour
      [Header("THE_fUEL_HEAT")]
      public Slider Fuelsli,Heatsli;
 
+     public FadeInandOut FadeInandOut;
+
 
 
 
@@ -206,8 +208,8 @@ else
     }
     public void Collect()
     {
-      
-    score_text.gameObject.SetActive(true); 
+       FadeInandOut.restartBool = true;
+       score_text.gameObject.SetActive(true); 
        if(score_Current>=score)
        {
         score=score_Current;

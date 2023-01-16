@@ -1296,7 +1296,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 367.77002, y: 924.77}
+  m_AnchoredPosition: {x: 293.32, y: 809}
   m_SizeDelta: {x: 393.36517, y: 196}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &290074551
@@ -7769,6 +7769,7 @@ MonoBehaviour:
   - {fileID: 394383595}
   Fuelsli: {fileID: 491129314}
   Heatsli: {fileID: 112272981}
+  FadeInandOut: {fileID: 903107705}
 --- !u!1 &1613985789
 GameObject:
   m_ObjectHideFlags: 0
@@ -8460,10 +8461,10 @@ RectTransform:
   m_Father: {fileID: 290074550}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0.000030518}
+  m_AnchoredPosition: {x: -196.5, y: -98}
+  m_SizeDelta: {x: 393, y: 196.00003}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1757919753
 MonoBehaviour:

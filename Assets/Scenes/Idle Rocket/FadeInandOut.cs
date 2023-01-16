@@ -12,9 +12,12 @@ public class FadeInandOut : MonoBehaviour
     
     public int bruhPls;
     public float levelTimer;
+
+    public bool restartBool;
     void Start()
     {
         levelTimer = 0;
+        restartBool = false;
     }
 
     // Update is called once per frame
@@ -22,21 +25,32 @@ public class FadeInandOut : MonoBehaviour
     {
         pointInArray = (int)levelTimer / 10;
         
+        if (restartBool)
+        {
+            backgroundsList[pointInArray].GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
+            restartBool = false;
+            levelTimer = 0;
+            pointInArray = (int)levelTimer / 10;
+            bruhPls = pointInArray;
+            backgroundsList[pointInArray].GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
+            StartCoroutine(FadeIn(backgroundsList[pointInArray].GetComponent<SpriteRenderer>()));
+        }
+        
         if (pointInArray != bruhPls)
         {
             backgroundsList[pointInArray].GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
             StartCoroutine(FadeIn(backgroundsList[pointInArray].GetComponent<SpriteRenderer>()));
             StartCoroutine(FadeOut(backgroundsList[pointInArray-1].GetComponent<SpriteRenderer>()));
+            Debug.Log("ananı bir sikerim var ya");
             BackgroundScroller.nextScrollingPlane = true;
             ScrollManager.nextScrollingBackground = true;
+            bruhPls = pointInArray;
         }
         
-
-        bruhPls = pointInArray;
-
+        
     }
     
-    private IEnumerator FadeIn(SpriteRenderer spriteRenderer)
+    public IEnumerator FadeIn(SpriteRenderer spriteRenderer)
     {
         float alphaVal = spriteRenderer.color.a;
         Color tmp = spriteRenderer.color;
@@ -51,7 +65,7 @@ public class FadeInandOut : MonoBehaviour
         }
     }
  
-    private IEnumerator FadeOut(SpriteRenderer spriteRenderer)
+    public IEnumerator FadeOut(SpriteRenderer spriteRenderer)
     {
         float alphaVal = spriteRenderer.color.a;
         Color tmp = spriteRenderer.color;
