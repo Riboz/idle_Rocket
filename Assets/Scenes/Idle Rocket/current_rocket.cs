@@ -68,7 +68,7 @@ public class current_rocket : MonoBehaviour
          this.transform.DOLocalMoveY(-1.5f,1);
 
          back[0].transform.DOLocalMoveY(-10,1); 
-          back[1].transform.DOLocalMoveY(-22,4); 
+         
      
          Fire_rocket_now=new GameObject[rocket_sobj.fire_positions.Length];
 
