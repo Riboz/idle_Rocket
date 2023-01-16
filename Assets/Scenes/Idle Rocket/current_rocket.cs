@@ -179,7 +179,7 @@ else
 {
      
    
-      if(Current_heat>=0){Current_heat-=50*Time.deltaTime;}
+      if(Current_heat>=0){Current_heat-=40*Time.deltaTime;}
          Heatsli.value=Current_heat;
 }
        
@@ -255,13 +255,14 @@ else
     }
    public IEnumerator the_restart_scaler()
    {
-    for(int i=0;i<=5;i--)
+    for(int i=0;i<=4;i++)
     {
       money_takes.transform.DOScale(1.05f,0.5f);
       yield return new WaitForSeconds(0.5f);
         money_takes.transform.DOScale(1f,0.5f);
         yield return new WaitForSeconds(0.5f);
     }
+
    }
    
    
