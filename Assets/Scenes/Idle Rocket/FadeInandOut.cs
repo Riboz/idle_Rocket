@@ -28,6 +28,8 @@ public class FadeInandOut : MonoBehaviour
         if (restartBool)
         {
             backgroundsList[pointInArray].GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
+            ScrollManager.scrollingBackgrounds[pointInArray].SetActive(false);
+            ScrollManager.restartScroll = true;
             restartBool = false;
             levelTimer = 0;
             pointInArray = (int)levelTimer / 10;

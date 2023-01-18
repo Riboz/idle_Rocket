@@ -8,6 +8,7 @@ public class ScrollManager : MonoBehaviour
     
     public GameObject[] scrollingBackgrounds;
     public bool nextScrollingBackground;
+    public bool restartScroll;
     void Start()
     {
         
@@ -20,6 +21,13 @@ public class ScrollManager : MonoBehaviour
             scrollingBackgrounds[FadeInandOut.pointInArray].SetActive(true);
             scrollingBackgrounds[FadeInandOut.pointInArray-1].SetActive(false);
             nextScrollingBackground = false;
+        }
+
+        if (restartScroll)
+        {
+            //scrollingBackgrounds[FadeInandOut.pointInArray].SetActive(false);
+            scrollingBackgrounds[0].SetActive(true);
+            restartScroll = false;
         }
     }
 }
