@@ -49,9 +49,13 @@ public class current_rocket : MonoBehaviour
 
 
 
-
+  void Awake()
+  {
+    Rightpanel.transform.DOMoveX(1300,0.5f);
+  }
     public void chosed(Rocket_Scriptable_object rocky)
     { 
+        Rightpanel.transform.DOMoveX(900,0.5f);
         the_choser_activation=false;
         canplay=true;
       
@@ -242,7 +246,7 @@ else
             Leftbutton[a].transform.DOMoveX(75,0.5f);
          }
          
-         Rightpanel.transform.DOMoveX(900,0.5f);
+         
 
             money_takes.SetActive(false);
              Fuelsli.value=Fuelsli.maxValue;
