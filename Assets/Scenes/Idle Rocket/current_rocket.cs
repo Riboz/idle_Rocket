@@ -38,10 +38,10 @@ public class current_rocket : MonoBehaviour
 
      public FadeInandOut FadeInandOut;
 
-     
-     
-     
- 
+
+     public Text bruhbruh;
+
+
      public float speedShopCost,fuelShopCost, interestShopCost = 1000;
      public Text speedShopCostText, fuelShopCostText, interestShopCostText;
 
@@ -55,11 +55,11 @@ public class current_rocket : MonoBehaviour
   }
     public void chosed(Rocket_Scriptable_object rocky)
     { 
-        Rightpanel.transform.DOMoveX(550,0.5f);
-        the_choser_activation=false;
-        canplay=true;
+      Rightpanel.transform.DOMoveX(550,0.5f);
+      the_choser_activation=false;
+      canplay=true;
       
-        Heatsli.maxValue=100;
+      Heatsli.maxValue=100;
 
       rocket_sobj=rocky;
      
@@ -77,10 +77,9 @@ public class current_rocket : MonoBehaviour
       Current_heat=50;
 
       this.GetComponent<SpriteRenderer>().sprite=rocket_sobj.rocket_sprite;
+      start_button.gameObject.SetActive(true);
+      bruhbruh.text = rocket_sobj.Fuel.ToString();
 
-       
-         start_button.gameObject.SetActive(true);
-    
     }
     public void Game_Start_Button()
     {
