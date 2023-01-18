@@ -38,6 +38,13 @@ public class current_rocket : MonoBehaviour
 
      public FadeInandOut FadeInandOut;
 
+     
+     
+     
+ 
+     public float speedShopCost,fuelShopCost, interestShopCost = 1000;
+     public Text speedShopCostText, fuelShopCostText, interestShopCostText;
+
 
 
 
@@ -268,6 +275,47 @@ else
         yield return new WaitForSeconds(0.5f);
     }
 
+   }
+
+
+   public void SpeedUpShop()
+   {
+    if (money >= speedShopCost)
+    {
+     rocket_sobj.speed = rocket_sobj.speed * 1.2f;
+     speed = rocket_sobj.speed;
+     Debug.Log(speedShopCost);
+     speedShopCost = speedShopCost * 1.213f;
+     Debug.Log(speedShopCost);
+     money = money - (int)speedShopCost;
+     speedShopCostText.text = ((int)speedShopCost).ToString();
+     money_Text.text = money.ToString();
+    }
+   }
+
+   public void FuelShop()
+   {
+    if (money >= fuelShopCost)
+    {
+     rocket_sobj.Fuel += 5;
+     maxfuel = rocket_sobj.Fuel;
+     fuelShopCost = fuelShopCost * 1.213f;
+     fuelShopCostText.text = ((int)fuelShopCost).ToString();
+     money = money - (int) fuelShopCost;
+     money_Text.text = money.ToString();
+    }
+   }
+   public void InterestShop()
+   {
+    if (money >= interestShopCost)
+    {
+     rocket_sobj.Money_earing_constant += 1;
+     Money_earing_constant = rocket_sobj.Money_earing_constant;
+     interestShopCost = interestShopCost * 1.5f;
+     money = money - (int)interestShopCost;
+     interestShopCostText.text = ((int)interestShopCost).ToString();
+     money_Text.text = money.ToString();
+    }
    }
    
    
