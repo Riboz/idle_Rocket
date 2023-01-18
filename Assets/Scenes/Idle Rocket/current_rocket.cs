@@ -51,6 +51,7 @@ public class current_rocket : MonoBehaviour
   void Awake()
   {
     Rightpanel.transform.DOMoveX(1300,0.5f);
+    Application.targetFrameRate = 60;
   }
     public void chosed(Rocket_Scriptable_object rocky)
     { 
