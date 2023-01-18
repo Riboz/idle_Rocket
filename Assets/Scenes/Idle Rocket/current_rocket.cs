@@ -136,6 +136,10 @@ public class current_rocket : MonoBehaviour
           Gas_button.gameObject.SetActive(true);
           tiklaniyor=false;
           restart_bool=true;
+           for( int i=0;i<=Fire_rocket_now.Length-1;i++)
+      {
+          StartCoroutine(Fire_rocket_now[i].GetComponent<fire_constant>().fire());
+      }
          yield break;
         
     }
@@ -188,12 +192,31 @@ if(tiklaniyor)
        Fuelsli.value=Current_fuel;
         Current_heat+=50*Time.deltaTime;
       Heatsli.value=Current_heat;
+      
+      for( int i=0;i<=Fire_rocket_now.Length-1;i++)
+      {
+        if(Fire_rocket_now[i]!=null)
+        {
+          Fire_rocket_now[i].GetComponent<fire_constant>().fire_constant_value=2.2f;
+        }
+      }
+    
+      
 }
 else
 {
      
    
       if(Current_heat>=0){Current_heat-=40*Time.deltaTime;}
+       for( int i=0;i<=Fire_rocket_now.Length-1;i++)
+      {
+        
+        if(Fire_rocket_now[i]!=null)
+        {
+       Fire_rocket_now[i].GetComponent<fire_constant>().fire_constant_value=1.3f;
+        }
+      
+      }
          Heatsli.value=Current_heat;
 }
        
