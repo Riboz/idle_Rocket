@@ -7,7 +7,8 @@ using DG.Tweening;
 public class current_rocket : MonoBehaviour
 {
     // Start is called before the first frame update
-
+   public audios aud;
+   public ParticleSystem CaBoom;
 
     public Text Reward_money_text,score_text,cscore_text,collect_Score_text,money_Text;
 
@@ -55,6 +56,9 @@ public class current_rocket : MonoBehaviour
   }
     public void chosed(Rocket_Scriptable_object rocky)
     { 
+      aud.GetComponent<AudioSource>().loop=false;
+      aud.GetComponent<AudioSource>().clip=aud.aiduo[4];
+       aud.GetComponent<AudioSource>().Play();
       Rightpanel.transform.DOMoveX(550,0.5f);
       the_choser_activation=false;
       canplay=true;
@@ -96,6 +100,10 @@ public class current_rocket : MonoBehaviour
     }
     IEnumerator the_Button_transform()
     {
+     
+aud.GetComponent<AudioSource>().loop=true;
+      aud.GetComponent<AudioSource>().clip=aud.aiduo[2];
+       aud.GetComponent<AudioSource>().Play();
       
 
          for(int a=0;a<=Leftbutton.Length-1;a++)
@@ -241,6 +249,7 @@ else
     }
     public void Collect()
     {
+       Destroy(destroying);
        FadeInandOut.restartBool = true;
        score_text.gameObject.SetActive(true); 
        if(score_Current>=score)
@@ -273,10 +282,18 @@ else
             money_takes.SetActive(false);
              Fuelsli.value=Fuelsli.maxValue;
               Heatsli.value=Heatsli.minValue;
-
+           aud.GetComponent<AudioSource>().clip=aud.aiduo[0];
+              aud.GetComponent<AudioSource>().loop=false;
+               aud.GetComponent<AudioSource>().Play();
     }
+    public ParticleSystem destroying;
     public void Restart()
     {
+       destroying=Instantiate(CaBoom,this.transform.position,Quaternion.identity);
+       aud.GetComponent<AudioSource>().loop=false;
+       aud.GetComponent<AudioSource>().clip=aud.aiduo[5];
+       aud.GetComponent<AudioSource>().Play();
+         
      collect_Score_text.text="Score="+score_Current;
      cscore_text.gameObject.SetActive(false); 
      money_takes.SetActive(true);
@@ -316,6 +333,9 @@ else
      money = money - (int)speedShopCost;
      speedShopCostText.text = ((int)speedShopCost).ToString();
      money_Text.text = money.ToString();
+      aud.GetComponent<AudioSource>().clip=aud.aiduo[1];
+      aud.GetComponent<AudioSource>().loop=false;
+        aud.GetComponent<AudioSource>().Play();
     }
    }
 
@@ -329,6 +349,10 @@ else
      fuelShopCostText.text = ((int)fuelShopCost).ToString();
      money = money - (int) fuelShopCost;
      money_Text.text = money.ToString();
+           aud.GetComponent<AudioSource>().clip=aud.aiduo[1];
+           aud.GetComponent<AudioSource>().loop=false;
+             aud.GetComponent<AudioSource>().Play();
+           
     }
    }
    public void InterestShop()
@@ -341,6 +365,9 @@ else
      money = money - (int)interestShopCost;
      interestShopCostText.text = ((int)interestShopCost).ToString();
      money_Text.text = money.ToString();
+           aud.GetComponent<AudioSource>().clip=aud.aiduo[1];
+           aud.GetComponent<AudioSource>().loop=false;
+             aud.GetComponent<AudioSource>().Play();
     }
    }
    
