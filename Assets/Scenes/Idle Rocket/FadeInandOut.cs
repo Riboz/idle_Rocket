@@ -23,7 +23,7 @@ public class FadeInandOut : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        pointInArray = (int)levelTimer / 10;
+        pointInArray = (int)levelTimer / 5;
         
         if (restartBool)
         {
@@ -32,7 +32,7 @@ public class FadeInandOut : MonoBehaviour
             ScrollManager.restartScroll = true;
             restartBool = false;
             levelTimer = 0;
-            pointInArray = (int)levelTimer / 10;
+            pointInArray = (int)levelTimer / 5;
             bruhPls = pointInArray;
             backgroundsList[pointInArray].GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
             StartCoroutine(FadeIn(backgroundsList[pointInArray].GetComponent<SpriteRenderer>()));
