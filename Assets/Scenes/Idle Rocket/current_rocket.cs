@@ -55,7 +55,7 @@ public class current_rocket : MonoBehaviour
   }
     public void chosed(Rocket_Scriptable_object rocky)
     { 
-        Rightpanel.transform.DOMoveX(900,0.5f);
+        Rightpanel.transform.DOMoveX(550,0.5f);
         the_choser_activation=false;
         canplay=true;
       

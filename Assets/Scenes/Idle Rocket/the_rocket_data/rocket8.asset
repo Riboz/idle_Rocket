@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: rocket8
   m_EditorClassIdentifier: 
   Fuel: 90
-  speed: 40
+  speed: 50
   rocket_sprite: {fileID: 21300000, guid: 97e019f44181d0048aabda6ae829148a, type: 3}
   Money_earing_constant: 19
   fire_positions:
