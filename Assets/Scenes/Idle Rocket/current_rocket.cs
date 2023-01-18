@@ -38,8 +38,7 @@ public class current_rocket : MonoBehaviour
 
      public FadeInandOut FadeInandOut;
 
-
-     public Text bruhbruh;
+     
 
 
      public float speedShopCost,fuelShopCost, interestShopCost = 1000;
@@ -78,7 +77,7 @@ public class current_rocket : MonoBehaviour
 
       this.GetComponent<SpriteRenderer>().sprite=rocket_sobj.rocket_sprite;
       start_button.gameObject.SetActive(true);
-      bruhbruh.text = rocket_sobj.Fuel.ToString();
+     
 
     }
     public void Game_Start_Button()

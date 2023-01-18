@@ -34,8 +34,8 @@ public class FadeInandOut : MonoBehaviour
             levelTimer = 0;
             pointInArray = (int)levelTimer / 5;
             bruhPls = pointInArray;
-            backgroundsList[pointInArray].GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
-            StartCoroutine(FadeIn(backgroundsList[pointInArray].GetComponent<SpriteRenderer>()));
+            backgroundsList[0].GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
+            StartCoroutine(FadeIn(backgroundsList[0].GetComponent<SpriteRenderer>()));
         }
         
         if (pointInArray != bruhPls)
