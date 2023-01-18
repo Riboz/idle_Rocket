@@ -47,18 +47,37 @@ public class current_rocket : MonoBehaviour
 
 
 
-
+void Start()
+{
+   score_text.text=PlayerPrefs.GetInt("Datascore")+"";
+     money_Text.text=PlayerPrefs.GetInt("Moneydata")+"";
+}
 
   void Awake()
   {
+
     Rightpanel.transform.DOMoveX(1300,0.5f);
+
     Application.targetFrameRate = 60;
+    
+    if (PlayerPrefs.HasKey("Datascore"))  //totalScoreKey anahtarıyla kaydedilmiş bir veri var mı ?
+   {
+            score = PlayerPrefs.GetInt("Datascore"); // totalScoreKey anahtarıyla kaydedilmiş veriyi getir
+            score_text.text=score.ToString();
+   }
+
+     if (PlayerPrefs.HasKey("Moneydata"))  //totalScoreKey anahtarıyla kaydedilmiş bir veri var mı ?
+   {
+            money = PlayerPrefs.GetInt("Datascore"); // totalScoreKey anahtarıyla kaydedilmiş veriyi getir
+           money_Text.text=money.ToString();
+   }
+
   }
     public void chosed(Rocket_Scriptable_object rocky)
     { 
       aud.GetComponent<AudioSource>().loop=false;
       aud.GetComponent<AudioSource>().clip=aud.aiduo[4];
-       aud.GetComponent<AudioSource>().Play();
+      aud.GetComponent<AudioSource>().Play();
       Rightpanel.transform.DOMoveX(550,0.5f);
       the_choser_activation=false;
       canplay=true;
@@ -175,6 +194,7 @@ aud.GetComponent<AudioSource>().loop=true;
     
     
     float timer_money;
+    
     void FixedUpdate()
     {
         if(Game_start)
@@ -249,6 +269,7 @@ else
     }
     public void Collect()
     {
+      
        Destroy(destroying);
        FadeInandOut.restartBool = true;
        score_text.gameObject.SetActive(true); 
@@ -279,12 +300,21 @@ else
          
          
 
-            money_takes.SetActive(false);
-             Fuelsli.value=Fuelsli.maxValue;
+              money_takes.SetActive(false);
+              Fuelsli.value=Fuelsli.maxValue;
               Heatsli.value=Heatsli.minValue;
-           aud.GetComponent<AudioSource>().clip=aud.aiduo[0];
+              aud.GetComponent<AudioSource>().clip=aud.aiduo[0];
               aud.GetComponent<AudioSource>().loop=false;
                aud.GetComponent<AudioSource>().Play();
+
+               PlayerPrefs.SetInt("Datascore",score); 
+               PlayerPrefs.SetInt("Moneydata",money); 
+                
+
+               PlayerPrefs.Save();
+
+
+               
     }
     public ParticleSystem destroying;
     public void Restart()
